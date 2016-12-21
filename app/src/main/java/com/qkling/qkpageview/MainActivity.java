@@ -16,9 +16,9 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.pageView)
-    private KCPageView pageView;
-    @BindView(R.id.pageView)
-    private ViewPager viewPager;
+    public KCPageView mPageView;
+    @BindView(R.id.viewPager)
+    public ViewPager mPager;
     private List<Fragment> fragmentList;
 
     @Override
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentList.add(new FragmentOne());
         fragmentList.add(new FragmentTwo());
         MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), fragmentList);
-        viewPager.setAdapter(myPagerAdapter);
-        pageView.setUpViewPager(viewPager);
+        mPager.setAdapter(myPagerAdapter);
+        mPageView.setUpViewPager(mPager);
     }
 }

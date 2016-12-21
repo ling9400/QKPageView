@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="KCPageView">
+        <attr name="kTextSize" format="dimension"/>
+        <attr name="kLeftText" format="string"/>
+        <attr name="kRightText" format="string"/>
+        <attr name="kSelectTextColor" format="color"/>
+        <attr name="kTextColor" format="color"/>
+        <attr name="kSelectLeftDrawable" format="reference"/>
+        <attr name="kLeftDrawable" format="reference"/>
+        <attr name="kSelectRightDrawable" format="reference"/>
+        <attr name="kRightDrawable" format="reference"/>
+        <attr name="kDefaultChoose" format="boolean"/>
+        <attr name="kPadding" format="dimension"/>
+    </declare-styleable>
+</resources>
