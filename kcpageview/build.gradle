@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'//添加
 
-version = "1.0.0"
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
@@ -24,6 +23,16 @@ android {
     }
 }
 
+allprojects {
+    tasks.withType(Javadoc) {
+        options{
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -40,4 +49,7 @@ publish {
     publishVersion = '1.0.0'//版本号
     desc = 'myself view'//描述，不重要
     website = 'https://github.com/ling9400/QKPageView/tree/master'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+
+    bintrayUser = 'ling9400' //你的用户名
+    bintrayKey = 'abc04127823fd4ebea633fa7d5f25755437342f4' //在你的账户里面查找
 }

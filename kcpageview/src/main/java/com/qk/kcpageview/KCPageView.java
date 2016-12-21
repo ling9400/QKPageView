@@ -33,30 +33,18 @@ public class KCPageView extends LinearLayout {
      */
     private String mRightText;
     private TextView tvRight;
-    /**
-     * 选中的字体颜色
-     */
     private int mSelectedTextColor;
-    /**
-     * 未选中的字体颜色
-     */
     private int mTextColor;
-    /**
-     * 选中的背景
-     */
     private Drawable mSelectedLeftDrawable;
     private Drawable mSelectedRightDrawable;
-    /**
-     * 未选中的背景
-     */
     private Drawable mLeftDrawable;
     private Drawable mRightDrawable;
     /**
-     * 默认选中
+     * default choose
      */
     private boolean mDefaultChoose;
     /**
-     * 内边距
+     * padding
      */
     private int mPadding;
     /**
@@ -139,9 +127,6 @@ public class KCPageView extends LinearLayout {
         initView();
     }
 
-    /**
-     * 初始化
-     */
     private void initView() {
         if(mSelectedLeftDrawable == null){
             mSelectedLeftDrawable = getResources().getDrawable(R.drawable.radius_left_friend_title);
@@ -176,7 +161,7 @@ public class KCPageView extends LinearLayout {
         tvLeft.setTextSize(mTextSize);
         tvRight.setTextSize(mTextSize);
         Log.i("KK","textSize = " + mTextSize + "padding = " + mPadding);
-        if(!mDefaultChoose){//为false表示选中第一个
+        if(!mDefaultChoose){
             tvLeft.setBackground(mSelectedLeftDrawable);
             tvRight.setBackground(mRightDrawable);
             tvLeft.setTextColor(mSelectedTextColor);
@@ -227,7 +212,6 @@ public class KCPageView extends LinearLayout {
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
-
     }
 
     public interface OnLeftClickListener{
